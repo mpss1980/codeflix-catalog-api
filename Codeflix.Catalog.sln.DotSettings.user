@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3c23a60d_002D0c9c_002D484f_002D9cb5_002Da53482422404/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CategoryTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::FE02BB3C-F636-4A6E-8676-03CBB1EA43BF::net6.0::Codeflix.Catalog.UnitTest.Domain.Entities.Category.CategoryTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::FE02BB3C-F636-4A6E-8676-03CBB1EA43BF::net6.0::Codeflix.Catalog.UnitTest.Domain.Validations.DomainValidationTest.NotNullError&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::FE02BB3C-F636-4A6E-8676-03CBB1EA43BF::net6.0::Codeflix.Catalog.UnitTest.Domain.Validations.DomainValidationTest.NotNullOrEmptyThrowWhenEmpty&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::FE02BB3C-F636-4A6E-8676-03CBB1EA43BF::net6.0::Codeflix.Catalog.UnitTest.Domain.Validations.DomainValidationTest.NotNullOrEmptyOk&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::FE02BB3C-F636-4A6E-8676-03CBB1EA43BF::net6.0::Codeflix.Catalog.UnitTest.Domain.Validations.DomainValidationTest.MinLengthThrowWhenLess&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::FE02BB3C-F636-4A6E-8676-03CBB1EA43BF::net6.0::Codeflix.Catalog.UnitTest.Domain.Validations.DomainValidationTest.MinLengthOk&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	</wpf:ResourceDictionary>
