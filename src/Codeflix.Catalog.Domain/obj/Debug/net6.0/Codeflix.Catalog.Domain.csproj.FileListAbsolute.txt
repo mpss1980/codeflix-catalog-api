@@ -1,0 +1,12 @@
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/bin/Debug/net6.0/Codeflix.Catalog.Domain.deps.json
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/bin/Debug/net6.0/Codeflix.Catalog.Domain.dll
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/bin/Debug/net6.0/Codeflix.Catalog.Domain.pdb
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/obj/Debug/net6.0/Codeflix.Catalog.Domain.csproj.AssemblyReference.cache
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/obj/Debug/net6.0/Codeflix.Catalog.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/obj/Debug/net6.0/Codeflix.Catalog.Domain.AssemblyInfoInputs.cache
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/obj/Debug/net6.0/Codeflix.Catalog.Domain.AssemblyInfo.cs
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/obj/Debug/net6.0/Codeflix.Catalog.Domain.csproj.CoreCompileInputs.cache
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/obj/Debug/net6.0/Codeflix.Catalog.Domain.dll
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/obj/Debug/net6.0/refint/Codeflix.Catalog.Domain.dll
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/obj/Debug/net6.0/Codeflix.Catalog.Domain.pdb
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/obj/Debug/net6.0/ref/Codeflix.Catalog.Domain.dll
