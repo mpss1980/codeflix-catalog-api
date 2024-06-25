@@ -7,6 +7,8 @@
     &lt;TestId&gt;xUnit::FE02BB3C-F636-4A6E-8676-03CBB1EA43BF::net6.0::Codeflix.Catalog.UnitTest.Domain.Validations.DomainValidationTest.NotNullOrEmptyOk&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::FE02BB3C-F636-4A6E-8676-03CBB1EA43BF::net6.0::Codeflix.Catalog.UnitTest.Domain.Validations.DomainValidationTest.MinLengthThrowWhenLess&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::FE02BB3C-F636-4A6E-8676-03CBB1EA43BF::net6.0::Codeflix.Catalog.UnitTest.Domain.Validations.DomainValidationTest.MinLengthOk&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::FE02BB3C-F636-4A6E-8676-03CBB1EA43BF::net6.0::Codeflix.Catalog.UnitTest.Domain.Validations.DomainValidationTest.MaxLengthThrowWhenGreater&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::FE02BB3C-F636-4A6E-8676-03CBB1EA43BF::net6.0::Codeflix.Catalog.UnitTest.Domain.Validations.DomainValidationTest.MaxLengthOk&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

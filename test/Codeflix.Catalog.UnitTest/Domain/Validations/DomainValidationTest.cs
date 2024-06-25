@@ -13,8 +13,9 @@ public class DomainValidationTest
     [Fact(DisplayName = nameof(NotNullOk))]
     public void NotNullOk()
     {
+        var fieldName = Faker.Random.String2(1, 10);
         var value = Faker.Random.String2(1, 100);
-        Action action = () => DomainValidation.NotNull(value, "Value");
+        Action action = () => DomainValidation.NotNull(value, fieldName);
         action.Should().NotThrow();
     }
 
@@ -22,8 +23,9 @@ public class DomainValidationTest
     public void NotNullError()
     {
         string? value = null;
-        Action action = () => DomainValidation.NotNull(value, "FieldName");
-        action.Should().Throw<EntityValidationException>().WithMessage("FieldName should not be null");
+        var fieldName = Faker.Random.String2(1, 10);
+        Action action = () => DomainValidation.NotNull(value, fieldName);
+        action.Should().Throw<EntityValidationException>().WithMessage($"{fieldName} should not be null");
     }
 
     [Theory(DisplayName = nameof(NotNullOrEmptyThrowWhenEmpty))]
@@ -32,55 +34,100 @@ public class DomainValidationTest
     [InlineData(null)]
     public void NotNullOrEmptyThrowWhenEmpty(string? target)
     {
-        Action action = () => DomainValidation.NotNullOrEmpty(target, "FieldName");
-        action.Should().Throw<EntityValidationException>().WithMessage("FieldName should not be null or empty");
+        var fieldName = Faker.Random.String2(1, 10);
+        Action action = () => DomainValidation.NotNullOrEmpty(target, fieldName);
+        action.Should().Throw<EntityValidationException>().WithMessage($"{fieldName} should not be empty or null");
     }
 
     [Fact(DisplayName = nameof(NotNullOrEmptyOk))]
     public void NotNullOrEmptyOk()
     {
         var target = Faker.Random.String2(1, 100);
-        Action action = () => DomainValidation.NotNullOrEmpty(target, "FieldName");
+        var fieldName = Faker.Random.String2(1, 10);
+        Action action = () => DomainValidation.NotNullOrEmpty(target, fieldName);
         action.Should().NotThrow();
     }
 
     [Theory(DisplayName = nameof(MinLengthThrowWhenLess))]
-    [MemberData(nameof(GenerateNamesSmallerThanLength), parameters: 10)]
+    [MemberData(nameof(GenerateNamesSmallerThanMinLength), parameters: 10)]
     public void MinLengthThrowWhenLess(string target, int minLength)
     {
-        Action action = () => DomainValidation.MinLength(target, minLength, "FieldName");
+        var fieldName = Faker.Random.String2(1, 10);
+        Action action = () => DomainValidation.MinLength(target, minLength, fieldName);
         action.Should().Throw<EntityValidationException>()
-            .WithMessage($"FieldName should be at least {minLength} characters long");
+            .WithMessage($"{fieldName} should be at least {minLength} characters long");
     }
-    
-    public static IEnumerable<object[]> GenerateNamesSmallerThanLength(int testQuantity)
+
+    public static IEnumerable<object[]> GenerateNamesSmallerThanMinLength(int testQuantity)
     {
         var faker = new Faker();
         for (var i = 0; i < testQuantity; i++)
         {
             var example = faker.Commerce.ProductName();
             var minLength = example.Length + (new Random()).Next(1, 20);
-            yield return new object[]{ example, minLength };
+            yield return new object[] { example, minLength };
         }
     }
-    
-    
+
+
     [Theory(DisplayName = nameof(MinLengthOk))]
-    [MemberData(nameof(GenerateNamesGreaterThanLength), parameters: 10)]
+    [MemberData(nameof(GenerateNamesGreaterThanMinLength), parameters: 10)]
     public void MinLengthOk(string target, int minLength)
     {
-        Action action = () => DomainValidation.MinLength(target, minLength, "FieldName");
+        var fieldName = Faker.Random.String2(1, 10);
+        Action action = () => DomainValidation.MinLength(target, minLength, fieldName);
         action.Should().NotThrow();
     }
-    
-    public static IEnumerable<object[]> GenerateNamesGreaterThanLength(int testQuantity)
+
+    public static IEnumerable<object[]> GenerateNamesGreaterThanMinLength(int testQuantity)
     {
         var faker = new Faker();
         for (var i = 0; i < testQuantity; i++)
         {
             var example = faker.Commerce.ProductName();
             var minLength = example.Length - (new Random()).Next(1, example.Length - 1);
-            yield return new object[]{ example, minLength };
+            yield return new object[] { example, minLength };
+        }
+    }
+
+    [Theory(DisplayName = nameof(MaxLengthThrowWhenGreater))]
+    [MemberData(nameof(GenerateNamesGreaterThanMaxLength), parameters: 10)]
+    public void MaxLengthThrowWhenGreater(string target, int maxLength)
+    {
+        var fieldName = Faker.Random.String2(1, 10);
+        Action action = () => DomainValidation.MaxLength(target, maxLength, fieldName);
+        action.Should().Throw<EntityValidationException>()
+            .WithMessage($"{fieldName} should be less or equal to {maxLength} characters long");
+    }
+
+    public static IEnumerable<object[]> GenerateNamesGreaterThanMaxLength(int testQuantity)
+    {
+        var faker = new Faker();
+        for (var i = 0; i < testQuantity; i++)
+        {
+            var example = faker.Commerce.ProductName();
+            var maxLength = example.Length - (new Random()).Next(1, example.Length - 1);
+            yield return new object[] { example, maxLength };
+        }
+    }
+
+    [Theory(DisplayName = nameof(MaxLengthOk))]
+    [MemberData(nameof(GenerateNamesSmallerThanMaxLength), parameters: 10)]
+    public void MaxLengthOk(string target, int maxLength)
+    {
+        var fieldName = Faker.Random.String2(1, 10);
+        Action action = () => DomainValidation.MaxLength(target, maxLength, fieldName);
+        action.Should().NotThrow();
+    }
+
+    public static IEnumerable<object[]> GenerateNamesSmallerThanMaxLength(int testQuantity)
+    {
+        var faker = new Faker();
+        for (var i = 0; i < testQuantity; i++)
+        {
+            var example = faker.Commerce.ProductName();
+            var maxLength = example.Length + (new Random()).Next(1, 20);
+            yield return new object[] { example, maxLength };
         }
     }
 }
