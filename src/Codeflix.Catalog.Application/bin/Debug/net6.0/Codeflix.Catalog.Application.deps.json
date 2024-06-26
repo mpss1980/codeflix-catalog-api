@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Codeflix.Catalog.Application/1.0.0": {
+        "runtime": {
+          "Codeflix.Catalog.Application.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Codeflix.Catalog.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

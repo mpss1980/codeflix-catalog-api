@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "soX9OP5KDtzcZNy7Lf6OW4U561u35lT373dU10Dy6rP03UQSGDYC7S1Eqg366l3rcWL9my7l3n8NcdnA2m87aA==",
+  "dgSpecHash": "pKADXOzPzcWLX5vCyAZOHCJpBurrBq7OA35y9wBllo25e0UWw92HoZm4bqUaIfYa8NvGYIgxNIiaKfjImeDt7w==",
   "success": true,
   "projectFilePath": "/Users/field/Development/CodeFlix/api/Codeflix.Catalog/test/Codeflix.Catalog.UnitTest/Codeflix.Catalog.UnitTest.csproj",
   "expectedPackageFiles": [
     "/Users/field/.nuget/packages/bogus/35.5.1/bogus.35.5.1.nupkg.sha512",
+    "/Users/field/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/Users/field/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/Users/field/.nuget/packages/fluentassertions/7.0.0-alpha.4/fluentassertions.7.0.0-alpha.4.nupkg.sha512",
     "/Users/field/.nuget/packages/microsoft.codecoverage/17.1.0/microsoft.codecoverage.17.1.0.nupkg.sha512",
@@ -15,6 +16,7 @@
     "/Users/field/.nuget/packages/microsoft.testplatform.objectmodel/17.1.0/microsoft.testplatform.objectmodel.17.1.0.nupkg.sha512",
     "/Users/field/.nuget/packages/microsoft.testplatform.testhost/17.1.0/microsoft.testplatform.testhost.17.1.0.nupkg.sha512",
     "/Users/field/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
+    "/Users/field/.nuget/packages/moq/4.20.70/moq.4.20.70.nupkg.sha512",
     "/Users/field/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
     "/Users/field/.nuget/packages/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg.sha512",
     "/Users/field/.nuget/packages/nuget.frameworks/5.11.0/nuget.frameworks.5.11.0.nupkg.sha512",
@@ -42,6 +44,7 @@
     "/Users/field/.nuget/packages/system.console/4.3.0/system.console.4.3.0.nupkg.sha512",
     "/Users/field/.nuget/packages/system.diagnostics.debug/4.3.0/system.diagnostics.debug.4.3.0.nupkg.sha512",
     "/Users/field/.nuget/packages/system.diagnostics.diagnosticsource/4.3.0/system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512",
+    "/Users/field/.nuget/packages/system.diagnostics.eventlog/6.0.0/system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "/Users/field/.nuget/packages/system.diagnostics.tools/4.3.0/system.diagnostics.tools.4.3.0.nupkg.sha512",
     "/Users/field/.nuget/packages/system.diagnostics.tracing/4.3.0/system.diagnostics.tracing.4.3.0.nupkg.sha512",
     "/Users/field/.nuget/packages/system.dynamic.runtime/4.0.11/system.dynamic.runtime.4.0.11.nupkg.sha512",
