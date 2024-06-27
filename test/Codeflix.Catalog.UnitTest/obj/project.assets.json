@@ -1924,6 +1924,9 @@
       "Codeflix.Catalog.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Codeflix.Catalog.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Codeflix.Catalog.Application.dll": {}
         },

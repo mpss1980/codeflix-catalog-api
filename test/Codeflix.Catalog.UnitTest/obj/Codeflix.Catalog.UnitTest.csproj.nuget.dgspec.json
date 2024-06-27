@@ -25,7 +25,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/Codeflix.Catalog.Domain.csproj": {
+                "projectPath": "/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/Codeflix.Catalog.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

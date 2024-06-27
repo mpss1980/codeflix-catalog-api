@@ -34,4 +34,8 @@
       <ProjectReference Include="..\..\src\Codeflix.Catalog.Domain\Codeflix.Catalog.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Application\Usecases\" />
+    </ItemGroup>
+
 </Project>

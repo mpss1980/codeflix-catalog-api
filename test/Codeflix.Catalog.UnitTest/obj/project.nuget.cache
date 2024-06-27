@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pKADXOzPzcWLX5vCyAZOHCJpBurrBq7OA35y9wBllo25e0UWw92HoZm4bqUaIfYa8NvGYIgxNIiaKfjImeDt7w==",
+  "dgSpecHash": "KLMse4ASwrkoljLws0Khvr8Z1UvpobwQu5a05ZDfJvVLz2p8aA99Iq1LBBBeUZC8rVWVXO3cRQsyuSIxlWR25A==",
   "success": true,
   "projectFilePath": "/Users/field/Development/CodeFlix/api/Codeflix.Catalog/test/Codeflix.Catalog.UnitTest/Codeflix.Catalog.UnitTest.csproj",
   "expectedPackageFiles": [

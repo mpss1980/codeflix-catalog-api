@@ -10,3 +10,6 @@
 /Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Application/obj/Debug/net6.0/refint/Codeflix.Catalog.Application.dll
 /Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Application/obj/Debug/net6.0/Codeflix.Catalog.Application.pdb
 /Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Application/obj/Debug/net6.0/ref/Codeflix.Catalog.Application.dll
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Application/bin/Debug/net6.0/Codeflix.Catalog.Domain.dll
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Application/bin/Debug/net6.0/Codeflix.Catalog.Domain.pdb
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Application/obj/Debug/net6.0/Codeflix.Catalog.Application.csproj.CopyComplete

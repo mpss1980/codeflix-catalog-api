@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Codeflix.Catalog.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Codeflix.Catalog.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Codeflix.Catalog.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Codeflix.Catalog.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Codeflix.Catalog.Domain/Codeflix.Catalog.Domain.csproj",
+      "msbuildProject": "../Codeflix.Catalog.Domain/Codeflix.Catalog.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Codeflix.Catalog.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/field/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/Codeflix.Catalog.Domain.csproj": {
+              "projectPath": "/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Domain/Codeflix.Catalog.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

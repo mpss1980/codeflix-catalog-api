@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "Codeflix.Catalog.Application/1.0.0": {
+        "dependencies": {
+          "Codeflix.Catalog.Domain": "1.0.0"
+        },
         "runtime": {
           "Codeflix.Catalog.Application.dll": {}
+        }
+      },
+      "Codeflix.Catalog.Domain/1.0.0": {
+        "runtime": {
+          "Codeflix.Catalog.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Codeflix.Catalog.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Codeflix.Catalog.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
