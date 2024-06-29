@@ -10,4 +10,8 @@
       <ProjectReference Include="..\Codeflix.Catalog.Domain\Codeflix.Catalog.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="12.3.0" />
+    </ItemGroup>
+
 </Project>

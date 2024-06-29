@@ -6,4 +6,5 @@ namespace Codeflix.Catalog.Domain.Repositories;
 public interface ICategoryRepository : IRepository
 {
     Task Insert(Category category, CancellationToken cancellationToken);
+    Task<Category> Get(Guid id, CancellationToken cancellationToken);
 }

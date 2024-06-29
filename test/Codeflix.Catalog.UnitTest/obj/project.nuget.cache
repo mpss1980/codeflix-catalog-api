@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KLMse4ASwrkoljLws0Khvr8Z1UvpobwQu5a05ZDfJvVLz2p8aA99Iq1LBBBeUZC8rVWVXO3cRQsyuSIxlWR25A==",
+  "dgSpecHash": "RYCcNpoixx1Cf2PLAwgI9+AFOTfEyUD/pFA+TWEPH0fqjwNI+lkF7+W7CEkzFarUcQal8zy+VCausxLJuOuabw==",
   "success": true,
   "projectFilePath": "/Users/field/Development/CodeFlix/api/Codeflix.Catalog/test/Codeflix.Catalog.UnitTest/Codeflix.Catalog.UnitTest.csproj",
   "expectedPackageFiles": [
@@ -8,8 +8,11 @@
     "/Users/field/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/Users/field/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/Users/field/.nuget/packages/fluentassertions/7.0.0-alpha.4/fluentassertions.7.0.0-alpha.4.nupkg.sha512",
+    "/Users/field/.nuget/packages/mediatr/12.3.0/mediatr.12.3.0.nupkg.sha512",
+    "/Users/field/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/field/.nuget/packages/microsoft.codecoverage/17.1.0/microsoft.codecoverage.17.1.0.nupkg.sha512",
     "/Users/field/.nuget/packages/microsoft.csharp/4.0.1/microsoft.csharp.4.0.1.nupkg.sha512",
+    "/Users/field/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/Users/field/.nuget/packages/microsoft.net.test.sdk/17.1.0/microsoft.net.test.sdk.17.1.0.nupkg.sha512",
     "/Users/field/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/field/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",

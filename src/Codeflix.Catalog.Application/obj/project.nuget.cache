@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Tvk5hq6f9D392ZFjQVS46A4aa0G4TUUYWPP5xL4BhBb/lPmQ2dcUYHAETRPwfl0/bxCzbX82v8dyu2vf58BsDg==",
+  "dgSpecHash": "G5MPuwzlTqcynVTIAL/W7hStXjtjxgXKXOMAOHvm6UBiNC2zbbWBB5F3A7aD/+pJEV/ly+AbyWkn+Xkiod0RTQ==",
   "success": true,
   "projectFilePath": "/Users/field/Development/CodeFlix/api/Codeflix.Catalog/src/Codeflix.Catalog.Application/Codeflix.Catalog.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/field/.nuget/packages/mediatr/12.3.0/mediatr.12.3.0.nupkg.sha512",
+    "/Users/field/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/field/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

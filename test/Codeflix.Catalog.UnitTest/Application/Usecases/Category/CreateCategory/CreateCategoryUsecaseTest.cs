@@ -23,8 +23,8 @@ public class CreateCategoryUsecaseTest
     [Fact(DisplayName = nameof(CreateCategory))]
     public async void CreateCategory()
     {
-        var repositoryMock = _fixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
+        var repositoryMock = CreateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = CreateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
         var usecase = new CreateCategoryUsecase(repositoryMock.Object, unitOfWorkMock.Object);
         var input = _fixture.CreateCategoryInput();
 
@@ -51,8 +51,8 @@ public class CreateCategoryUsecaseTest
     [Fact(DisplayName = nameof(CreateCategoryOnlyWithName))]
     public async void CreateCategoryOnlyWithName()
     {
-        var repositoryMock = _fixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
+        var repositoryMock = CreateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = CreateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
         var usecase = new CreateCategoryUsecase(repositoryMock.Object, unitOfWorkMock.Object);
         var input = new CreateCategoryInput(
             _fixture.GetValidName()
@@ -77,12 +77,12 @@ public class CreateCategoryUsecaseTest
         output.IsActive.Should().BeTrue();
         output.CreatedAt.Should().NotBeSameDateAs(default(DateTime));
     }
-    
+
     [Fact(DisplayName = nameof(CreateCategoryOnlyWithNameAndDescription))]
     public async void CreateCategoryOnlyWithNameAndDescription()
     {
-        var repositoryMock = _fixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
+        var repositoryMock = CreateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = CreateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
         var usecase = new CreateCategoryUsecase(repositoryMock.Object, unitOfWorkMock.Object);
         var input = new CreateCategoryInput(
             _fixture.GetValidName(),
@@ -110,39 +110,17 @@ public class CreateCategoryUsecaseTest
     }
 
     [Theory(DisplayName = nameof(ThrowErrorWhenCannotInstantiateCategory))]
-    [MemberData(nameof(GetInvalidInputs))]
+    [MemberData(
+        nameof(CreateCategoryUsecaseTestDataGenerator.GetInvalidInputs),
+        MemberType = typeof(CreateCategoryUsecaseTestDataGenerator))
+    ]
     public async void ThrowErrorWhenCannotInstantiateCategory(CreateCategoryInput input)
     {
-        var repositoryMock = _fixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
+        var repositoryMock = CreateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = CreateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
         var usecase = new CreateCategoryUsecase(repositoryMock.Object, unitOfWorkMock.Object);
 
         Func<Task> task = async () => await usecase.Handle(input, CancellationToken.None);
         await task.Should().ThrowAsync<EntityValidationException>();
-    }
-
-    private static IEnumerable<object[]> GetInvalidInputs()
-    {
-        var fixture = new CreateCategoryUsecaseTestFixture();
-        var invalidInputList = new List<object[]>();
-
-        var invalidInputShortName = fixture.CreateCategoryInput();
-        invalidInputShortName.Name = invalidInputShortName.Name[..2];
-        invalidInputList.Add(new object[] { invalidInputShortName });
-
-        var invalidInputLongName = fixture.CreateCategoryInput();
-        invalidInputLongName.Name = string.Join(null, Enumerable.Range(1, 256).Select(_ => "A").ToArray());
-        invalidInputList.Add(new object[] { invalidInputLongName });
-
-        var invalidInputNullDescription = fixture.CreateCategoryInput();
-        invalidInputNullDescription.Description = null!;
-        invalidInputList.Add(new object[] { invalidInputNullDescription });
-
-        var invalidInputLongDescription = fixture.CreateCategoryInput();
-        invalidInputLongDescription.Description =
-            string.Join(null, Enumerable.Range(1, 10001).Select(_ => "A").ToArray());
-        invalidInputList.Add(new object[] { invalidInputLongDescription });
-
-        return invalidInputList;
     }
 }
