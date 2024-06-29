@@ -7,4 +7,5 @@ public interface ICategoryRepository : IRepository
 {
     Task Insert(Category category, CancellationToken cancellationToken);
     Task<Category> Get(Guid id, CancellationToken cancellationToken);
+    Task Delete(Category category, CancellationToken cancellationToken);
 }
