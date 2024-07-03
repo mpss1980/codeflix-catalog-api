@@ -19,7 +19,7 @@ public class UpdateCategoryUsecase : IUpdateCategoryUsecase
     {
         var category = await _categoryRepository.Get(request.Id, cancellationToken);
         category.Update(request.Name, request.Description);
-        if (request.IsActive != category.IsActive)
+        if (request.IsActive != null && request.IsActive != category.IsActive)
             if(category.IsActive) category.Deactivate();
             else category.Activate();
 
