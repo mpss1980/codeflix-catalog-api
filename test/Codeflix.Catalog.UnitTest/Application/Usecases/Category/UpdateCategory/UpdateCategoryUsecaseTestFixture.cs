@@ -28,6 +28,28 @@ public class UpdateCategoryUsecaseTestFixture : BaseFixture
         GetValidIsActive()
     );
     
+    public UpdateCategoryInput GetInvalidInputShortName()
+    {
+        var invalidInputShortName = GetValidInput();
+        invalidInputShortName.Name = invalidInputShortName.Name[..2];
+        return invalidInputShortName;
+    }
+    
+    public UpdateCategoryInput GetInvalidInputTooLongName()
+    {
+        var invalidInputTooLongName = GetValidInput();
+        invalidInputTooLongName.Name = string.Join(null, Enumerable.Range(1, 256).Select(_ => "A").ToArray());
+        return invalidInputTooLongName;
+    }
+    
+    public UpdateCategoryInput GetInvalidInputLongDescription()
+    {
+        var invalidInputLongDescription = GetValidInput();
+        invalidInputLongDescription.Description =
+            string.Join(null, Enumerable.Range(1, 10001).Select(_ => "A").ToArray());
+        return invalidInputLongDescription;
+    }
+    
     public UpdateCategoryInput GetValidInput(Guid? id = null) => new(
         id ?? Guid.NewGuid(),
         GetValidName(),
