@@ -1,4 +1,5 @@
 using Codeflix.Catalog.Domain.Entities;
+using Codeflix.Catalog.Domain.Params;
 using Codeflix.Catalog.Domain.SeedWork;
 
 namespace Codeflix.Catalog.Domain.Repositories;
@@ -9,4 +10,5 @@ public interface ICategoryRepository : IRepository
     Task<Category> Get(Guid id, CancellationToken cancellationToken);
     Task Delete(Category category, CancellationToken cancellationToken);
     Task Update(Category category, CancellationToken cancellationToken);
+    Task<SearchOutput<Category>> Search(SearchInput input, CancellationToken cancellationToken);
 }

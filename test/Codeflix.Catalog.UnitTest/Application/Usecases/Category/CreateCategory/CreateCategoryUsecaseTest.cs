@@ -1,9 +1,5 @@
-using Bogus;
-using Codeflix.Catalog.Application.Interfaces;
-using Codeflix.Catalog.Application.Usecases.Category;
 using Codeflix.Catalog.Application.Usecases.Category.CreateCategory;
 using Codeflix.Catalog.Domain.Exceptions;
-using Codeflix.Catalog.Domain.Repositories;
 using FluentAssertions;
 using Moq;
 using Xunit;

@@ -8,6 +8,15 @@
 
     <ItemGroup>
       <Compile Remove="Class1.cs" />
+      <Compile Remove="enums\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="enums\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="enums\**" />
     </ItemGroup>
 
 </Project>
