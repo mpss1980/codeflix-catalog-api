@@ -129,4 +129,49 @@ public class ListCategoriesUsecaseTest
             It.IsAny<CancellationToken>()
         ), Times.Once);
     }
+    
+     [Fact(DisplayName = nameof(ShouldListEvenWhenEmptyList))]
+    public async Task ShouldListEvenWhenEmptyList()
+    {
+        var repository = _fixture.GetCategoryRepositoryMock();
+        var input = _fixture.GetListCategoriesInput();
+        var repositoryOutputSearch = new SearchOutput<CategoryDomain.Category>(
+            currentPage: input.Page,
+            perPage: input.PerPage,
+            items: (new List<CategoryDomain.Category>()).AsReadOnly(),
+            total: 0
+        );
+
+        repository.Setup(x => x.Search(
+            It.Is<SearchInput>(searchInput =>
+                searchInput.Page == input.Page
+                && searchInput.PerPage == input.PerPage
+                && searchInput.Search == input.Search
+                && searchInput.OrderBy == input.Sort
+                && searchInput.Order == input.Dir
+            ),
+            It.IsAny<CancellationToken>()
+        )).ReturnsAsync(repositoryOutputSearch);
+
+        var usecase = new ListCategoriesUsecase(repository.Object);
+
+        var output = await usecase.Handle(input, CancellationToken.None);
+
+        output.Should().NotBeNull();
+        output.Page.Should().Be(repositoryOutputSearch.CurrentPage);
+        output.PerPage.Should().Be(repositoryOutputSearch.PerPage);
+        output.Total.Should().Be(0);
+        output.Items.Should().HaveCount(0);
+
+        repository.Verify(x => x.Search(
+            It.Is<SearchInput>(searchInput =>
+                searchInput.Page == input.Page
+                && searchInput.PerPage == input.PerPage
+                && searchInput.Search == input.Search
+                && searchInput.OrderBy == input.Sort
+                && searchInput.Order == input.Dir
+            ),
+            It.IsAny<CancellationToken>()
+        ), Times.Once);
+    }
 }
