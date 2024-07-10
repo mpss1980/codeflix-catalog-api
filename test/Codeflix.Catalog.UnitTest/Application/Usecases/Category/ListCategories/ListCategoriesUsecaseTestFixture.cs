@@ -1,4 +1,6 @@
 using Codeflix.Catalog.Application.Interfaces;
+using Codeflix.Catalog.Application.Usecases.Category.ListCategories;
+using Codeflix.Catalog.Domain.Params;
 using Codeflix.Catalog.Domain.Repositories;
 using Codeflix.Catalog.UnitTest.Common;
 using Moq;
@@ -25,6 +27,17 @@ public class ListCategoriesUsecaseTestFixture : BaseFixture
         GetValidDescription(),
         GetValidIsActive()
     );
+
+    public ListCategoriesInput GetListCategoriesInput()
+    {
+        return new ListCategoriesInput(
+            page: Faker.Random.Int(1, 10),
+            perPage: Faker.Random.Int(1, 100),
+            search: Faker.Commerce.ProductName(),
+            sort: Faker.Commerce.ProductName(),
+            dir: Faker.Random.Int(0, 10) > 5 ? SearchOrder.Ascending : SearchOrder.Descending
+        );
+    }
 
     public List<CategoryDomain.Category> CreateCategories(int count) =>
         Enumerable.Range(1, count).Select(_ => CreateCategory()).ToList();
