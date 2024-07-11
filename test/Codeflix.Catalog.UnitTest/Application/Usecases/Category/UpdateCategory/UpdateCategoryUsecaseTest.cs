@@ -26,8 +26,8 @@ public class UpdateCategoryUsecaseTest
     ]
     public async Task UpdateCategory(CategoryDomain.Category category, UpdateCategoryInput input)
     {
-        var repositoryMock = UpdateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = UpdateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
+        var repositoryMock = _fixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
 
         repositoryMock.Setup(x => x.Get(
             category.Id,
@@ -68,8 +68,8 @@ public class UpdateCategoryUsecaseTest
     ]
     public async Task UpdateCategoryWithNoIsActiveProvided(CategoryDomain.Category category, UpdateCategoryInput input)
     {
-        var repositoryMock = UpdateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = UpdateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
+        var repositoryMock = _fixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
         var inputWithoutIsActive = new UpdateCategoryInput(
             input.Id,
             input.Name,
@@ -114,8 +114,8 @@ public class UpdateCategoryUsecaseTest
     ]
     public async Task UpdateCategoryOnlyName(CategoryDomain.Category category, UpdateCategoryInput input)
     {
-        var repositoryMock = UpdateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = UpdateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
+        var repositoryMock = _fixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
         var inputWithoutIsActive = new UpdateCategoryInput(
             input.Id,
             input.Name
@@ -154,8 +154,8 @@ public class UpdateCategoryUsecaseTest
     [Fact(DisplayName = nameof(ThrowWhenCategoryNotFound))]
     public async Task ThrowWhenCategoryNotFound()
     {
-        var repositoryMock = UpdateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = UpdateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
+        var repositoryMock = _fixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
         var input = _fixture.GetValidInput();
 
         repositoryMock.Setup(x => x.Get(
@@ -188,8 +188,8 @@ public class UpdateCategoryUsecaseTest
         string expectedMessage
         )
     {
-        var repositoryMock = UpdateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = UpdateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
+        var repositoryMock = _fixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
         var category = _fixture.CreateCategory();
         input.Id = category.Id;
         

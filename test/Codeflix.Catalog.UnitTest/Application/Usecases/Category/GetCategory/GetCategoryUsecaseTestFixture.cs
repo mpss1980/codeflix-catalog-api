@@ -1,8 +1,5 @@
-using Codeflix.Catalog.Domain.Repositories;
-using Codeflix.Catalog.UnitTest.Common;
-using Moq;
+using Codeflix.Catalog.UnitTest.Application.Usecases.Category.Common;
 using Xunit;
-using CategoryDomain = Codeflix.Catalog.Domain.Entities;
 
 namespace Codeflix.Catalog.UnitTest.Application.Usecases.Category.GetCategory;
 
@@ -11,19 +8,6 @@ public class GetCategoryUsecaseTestFixtureCollection : ICollectionFixture<GetCat
 {
 }
 
-public class GetCategoryUsecaseTestFixture : BaseFixture
+public class GetCategoryUsecaseTestFixture : CategoryUsecasesBaseFixture
 {
-    private string GetValidName() => Faker.Random.String2(3, 255);
-
-    private string GetValidDescription() => Faker.Random.String2(1, 10000);
-
-    private bool GetValidIsActive() => Faker.Random.Bool();
-
-    public CategoryDomain.Category GetValidCategory() => new(
-        GetValidName(),
-        GetValidDescription(),
-        GetValidIsActive()
-    );
-    
-    public Mock<ICategoryRepository> GetCategoryRepositoryMock() => new Mock<ICategoryRepository>();
 }

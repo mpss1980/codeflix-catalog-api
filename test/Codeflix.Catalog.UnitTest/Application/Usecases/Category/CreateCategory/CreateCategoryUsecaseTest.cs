@@ -19,8 +19,8 @@ public class CreateCategoryUsecaseTest
     [Fact(DisplayName = nameof(CreateCategory))]
     public async void CreateCategory()
     {
-        var repositoryMock = CreateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = CreateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
+        var repositoryMock = _fixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
         var usecase = new CreateCategoryUsecase(repositoryMock.Object, unitOfWorkMock.Object);
         var input = _fixture.CreateCategoryInput();
 
@@ -47,8 +47,8 @@ public class CreateCategoryUsecaseTest
     [Fact(DisplayName = nameof(CreateCategoryOnlyWithName))]
     public async void CreateCategoryOnlyWithName()
     {
-        var repositoryMock = CreateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = CreateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
+        var repositoryMock = _fixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
         var usecase = new CreateCategoryUsecase(repositoryMock.Object, unitOfWorkMock.Object);
         var input = new CreateCategoryInput(
             _fixture.GetValidName()
@@ -77,8 +77,8 @@ public class CreateCategoryUsecaseTest
     [Fact(DisplayName = nameof(CreateCategoryOnlyWithNameAndDescription))]
     public async void CreateCategoryOnlyWithNameAndDescription()
     {
-        var repositoryMock = CreateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = CreateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
+        var repositoryMock = _fixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
         var usecase = new CreateCategoryUsecase(repositoryMock.Object, unitOfWorkMock.Object);
         var input = new CreateCategoryInput(
             _fixture.GetValidName(),
@@ -112,8 +112,8 @@ public class CreateCategoryUsecaseTest
     ]
     public async void ThrowErrorWhenCannotInstantiateCategory(CreateCategoryInput input)
     {
-        var repositoryMock = CreateCategoryUsecaseTestFixture.GetCategoryRepositoryMock();
-        var unitOfWorkMock = CreateCategoryUsecaseTestFixture.GetUnitOfWorkMock();
+        var repositoryMock = _fixture.GetCategoryRepositoryMock();
+        var unitOfWorkMock = _fixture.GetUnitOfWorkMock();
         var usecase = new CreateCategoryUsecase(repositoryMock.Object, unitOfWorkMock.Object);
 
         Func<Task> task = async () => await usecase.Handle(input, CancellationToken.None);
