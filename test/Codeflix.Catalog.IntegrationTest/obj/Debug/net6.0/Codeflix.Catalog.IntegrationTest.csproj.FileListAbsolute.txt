@@ -119,3 +119,4 @@
 /Users/field/Development/CodeFlix/api/Codeflix.Catalog/test/Codeflix.Catalog.IntegrationTest/bin/Debug/net6.0/MediatR.Contracts.dll
 /Users/field/Development/CodeFlix/api/Codeflix.Catalog/test/Codeflix.Catalog.IntegrationTest/bin/Debug/net6.0/Codeflix.Catalog.Application.dll
 /Users/field/Development/CodeFlix/api/Codeflix.Catalog/test/Codeflix.Catalog.IntegrationTest/bin/Debug/net6.0/Codeflix.Catalog.Application.pdb
+/Users/field/Development/CodeFlix/api/Codeflix.Catalog/test/Codeflix.Catalog.IntegrationTest/bin/Debug/net6.0/xunit.runner.json

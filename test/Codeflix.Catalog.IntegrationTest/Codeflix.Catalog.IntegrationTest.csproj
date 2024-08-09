@@ -20,4 +20,10 @@
       <ProjectReference Include="..\..\src\Codeflix.Catalog.Infra.Data.EntityFramework\Codeflix.Catalog.Infra.Data.EntityFramework.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="xunit.runner.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

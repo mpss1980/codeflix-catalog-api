@@ -52,15 +52,6 @@ public class CategoryRepositoryTestFixture : BaseFixture
         };
         return enumerableOrdered.ToList();
     }
-
-    public CodeflixCategoryDbContext CreateDbContext(bool preserveData = false)
-    {
-        var dbContext = new CodeflixCategoryDbContext(
-            new DbContextOptionsBuilder<CodeflixCategoryDbContext>()
-                .UseInMemoryDatabase("integration-tests-db")
-                .Options
-        );
-        if (!preserveData) dbContext.Database.EnsureDeleted();
-        return dbContext;
-    }
+    
+    
 }
