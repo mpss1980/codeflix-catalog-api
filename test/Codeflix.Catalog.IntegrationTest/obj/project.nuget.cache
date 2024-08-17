@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3vcjvuSlwDEnizsnighqdWQs64T6tKNSVlz79pzwi1hmBT277LaPqwsQd/ZoENWOsOzFzGyj9j1LRPRmB+ItXw==",
+  "dgSpecHash": "z6JdgmDCoBk=",
   "success": true,
   "projectFilePath": "/Users/field/Development/CodeFlix/api/Codeflix.Catalog/test/Codeflix.Catalog.IntegrationTest/Codeflix.Catalog.IntegrationTest.csproj",
   "expectedPackageFiles": [
