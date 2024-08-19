@@ -4,11 +4,11 @@ namespace Codeflix.Catalog.IntegrationTest.Infra.Data.EntityFramework.Applicatio
 
 public class CategoryUseCasesBaseFixture : BaseFixture
 {
-    private string GetValidName() => Faker.Random.String2(3, 255);
+    public string GetValidName() => Faker.Random.String2(3, 255);
 
-    private string GetValidDescription() => Faker.Random.String2(1, 10000);
+    public string GetValidDescription() => Faker.Random.String2(1, 10000);
 
-    private bool GetValidIsActive() => Faker.Random.Bool();
+    public bool GetValidIsActive() => Faker.Random.Bool();
 
     public Domain.Entities.Category GetValidCategory() => new(
         GetValidName(),
